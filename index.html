@@ -7,8 +7,23 @@
     align-items: center;
     justify-content: center;
   }
+  .loaded img {
+    transform: rotate(0);
+    opacity: 1;
+  }
   img {
     height: 10vh;
+    transform: rotate(-35deg);
+    transition: 
+        transform 1s ease-in-out 1s, 
+        opacity 1s ease-in-out;
+    opacity: 0;
   }
+
 </style>
-<img src="logo.svg" />
+<img src="/logo.svg" />
+<script>
+window.onload = function() {
+    document.body.className += " loaded";
+}
+</script>
